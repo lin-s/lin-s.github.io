@@ -22,5 +22,5 @@ layout: compress
   "start_url": "{{ '/index.html' | relative_url }}",
   "theme_color": "#2b5797",
   "background_color": "#ffffff",
-  "display": "fullscreen"
+  "display": "standalone"
 }
