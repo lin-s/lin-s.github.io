@@ -12,11 +12,13 @@ _site
 
 # NPM dependencies
 node_modules
-package-lock.json
+#package-lock.json
 
 # IDE configurations
 .idea
 .vscode
 
+# ENV configuration
+.env.local
+
 # Misc
-assets/js/dist
