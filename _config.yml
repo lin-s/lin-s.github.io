@@ -80,7 +80,7 @@ theme_mode: # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://avatars.githubusercontent.com/u/18734044?v=4
+avatar: /assets/img/avatar.jpg
 
 # boolean type, the global switch for TOC in posts.
 toc: true
@@ -96,10 +96,10 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
+    repo: lin-s/lin-s.github.io # <gh-username>/<repo>
+    repo_id: R_kgDOJZm2Bw
+    category: Announcements
+    category_id: DIC_kwDOJZm2B84CV8ax
     mapping: # optional, default to 'pathname'
     input_position: # optional, default to 'bottom'
     lang: # optional, default to the value of `site.lang`
