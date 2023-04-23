@@ -3,7 +3,7 @@
 <!-- layout specified -->
 
 {% if page.layout == 'post' %}
-  {% if site.analytics.google_analytics.pv.proxy_endpoint or site.analytics.google_analytics.pv.cache_path %}
+  {% if site.analytics.google.pv.proxy_endpoint or site.analytics.google.pv.cache_path %}
     <!-- pv-report needs countup.js -->
     <script async src="{{ site.data.assets[origin].countup.js | relative_url }}"></script>
   {% endif %}
@@ -90,10 +90,5 @@
   {% endif %}
 
   <!-- GA -->
-  {% if site.analytics.active == 'google' and site.analytics.google_analytics.id != empty and site.analytics.google_analytics.id %}
-    {% include google-analytics.html %}
-  {% endif %}
-  {% if site.analytics.active == 'baidu' and site.analytics.baidu_analytics.id != empty and site.analytics.baidu_analytics.id %}
-    {% include baidu-analytics.html %}
-  {% endif %}
+  {% include analytics.html %}
 {% endif %}

@@ -53,13 +53,13 @@ google_site_verification: # fill in to your verification string
 # The end of `jekyll-seo-tag` settings
 analytics:
   active: baidu # The global switch for analytics, e.g., 'google'.  Keep it empty means disable
-  google_analytics:
+  google:
     id: # fill in your Google Analytics ID
     # Google Analytics pageviews report settings
     pv:
       proxy_endpoint: # fill in the Google Analytics superProxy endpoint of Google App Engine
       cache_path: # the local PV cache data, friendly to visitors from GFW region
-  baidu_analytics:
+  baidu:
     # id: d1230862f2958a0dede367a0a669b89a # fill in your Baidu Analytics ID
     id: 3ac48ee62a8521b225680a66d3a28ef1 # github.io id
 

@@ -1,0 +1,6 @@
+{% if site.analytics.active == 'google' and site.analytics.google.id != empty and site.analytics.google.id %}
+  {% include analytics/google.html %}
+{% endif %}
+{% if site.analytics.active == 'baidu' and site.analytics.baidu.id != empty and site.analytics.baidu.id %}
+  {% include analytics/baidu.html %}
+{% endif %}
