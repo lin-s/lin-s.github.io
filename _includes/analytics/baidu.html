@@ -2,13 +2,15 @@
   The GA snippet
 -->
 <!-- Global site tag (gtag.js) - Baidu Analytics -->
-<script defer src="https://hm.baidu.com/hm.js?{{ site.analytics.baidu.id }}"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+{% if site.analytics.baidu.id != empty and site.analytics.baidu.id %}
+  <script defer src="https://hm.baidu.com/hm.js?{{ site.analytics.baidu.id }}"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
 
-    gtag('js', new Date());
-    gtag('config', '{{ site.analytics.baidu.id }}');
-  });
-</script>
+      gtag('js', new Date());
+      gtag('config', '{{ site.analytics.baidu.id }}');
+    });
+  </script>
+{% endif %}
