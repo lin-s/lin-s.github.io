@@ -12,12 +12,14 @@
   >
 
   {% if page.layout == 'home' or page.layout == 'post' %}
-    {% if site.google_analytics.pv.proxy_endpoint %}
-      <meta name="pv-proxy-endpoint" content="{{ site.google_analytics.pv.proxy_endpoint }}">
-    {% endif %}
+    {% if site.analytics.active == 'google' %}
+      {% if site.analytics.google_analytics.pv.proxy_endpoint %}
+        <meta name="pv-proxy-endpoint" content="{{ site.analytics.google_analytics.pv.proxy_endpoint }}">
+      {% endif %}
 
-    {% if site.google_analytics.pv.cache_path %}
-      <meta name="pv-cache-path" content="{{ site.google_analytics.pv.cache_path | relative_url }}">
+      {% if site.analytics.google_analytics.pv.cache_path %}
+        <meta name="pv-cache-path" content="{{ site.analytics.google_analytics.pv.cache_path | relative_url }}">
+      {% endif %}
     {% endif %}
   {% endif %}
 
@@ -70,15 +72,15 @@
   {% endif %}
 
   <!-- GA -->
-  {% if jekyll.environment == 'production' and site.google_analytics.id != empty and site.google_analytics.id %}
+  {% if jekyll.environment == 'production' and site.analytics.active == 'google' and site.analytics.google_analytics.id != empty and site.analytics.google_analytics.id %}
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials">
     <link rel="dns-prefetch" href="https://www.google-analytics.com">
 
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
-    {% if site.google_analytics.pv.proxy_endpoint %}
-      {% assign proxy_url = site.google_analytics.pv.proxy_endpoint
+    {% if site.analytics.google_analytics.pv.proxy_endpoint %}
+      {% assign proxy_url = site.analytics.google_analytics.pv.proxy_endpoint
         | replace: 'https://', ''
         | split: '/'
         | first
@@ -87,6 +89,10 @@
       <link rel="preconnect" href="{{ proxy_url }}" crossorigin="use-credentials">
       <link rel="dns-prefetch" href="{{ proxy_url }}">
     {% endif %}
+  {% endif %}
+  {% if jekyll.environment == 'production' and site.analytics.active == 'baidu' and site.analytics.baidu_analytics.id != empty and site.analytics.baidu_analytics.id %}
+    <link rel="preconnect" href="https://hm.baidu.com" crossorigin="use-credentials">
+    <link rel="dns-prefetch" href="https://hm.baidu.com">
   {% endif %}
 
   <!-- Bootstrap -->

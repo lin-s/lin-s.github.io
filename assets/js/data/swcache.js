@@ -29,9 +29,13 @@ const resource = [
 
 /* The request url with below domain will be cached */
 const allowedDomains = [
-    {% if site.google_analytics.id != empty and site.google_analytics.id %}
+    {% if site.analytics.active == 'google' and site.analytics.google_analytics.id != empty and site.analytics.google_analytics.id %}
         'www.googletagmanager.com',
         'www.google-analytics.com',
+    {% endif %}
+
+    {% if site.analytics.active == 'baidu' and site.analytics.baidu_analytics.id != empty and site.analytics.baidu_analytics.id %}
+        'hm.baidu.com',
     {% endif %}
 
     '{{ site.url | split: "//" | last }}',
@@ -48,7 +52,7 @@ const allowedDomains = [
 
 /* Requests that include the following path will be banned */
 const denyUrls = [
-    {% if site.google_analytics.pv.cache_path %}
-        '{{ site.google_analytics.pv.cache_path | absolute_url }}'
+    {% if site.analytics.google_analytics.pv.cache_path %}
+        '{{ site.analytics.google_analytics.pv.cache_path | absolute_url }}'
     {% endif %}
 ];
