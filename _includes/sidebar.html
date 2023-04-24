@@ -22,7 +22,7 @@
     <div class="site-title">
       <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
     </div>
-    <div class="site-subtitle font-italic">{{ site.tagline }}</div>
+    <div id="sidebar-tagline" class="site-subtitle font-italic">{{ site.tagline }}</div>
   </div>
   <!-- .profile-wrapper -->
 
@@ -104,3 +104,12 @@
   <!-- .sidebar-bottom -->
 </div>
 <!-- #sidebar -->
+<script>
+  const items = []
+  {% assign taglines = site.tagline | split: '|' %}
+  {% for tagline in taglines %}
+    items.push({{tagline}})
+  {% endfor %}
+  const item = items[Math.floor(Math.random() * items.length)];
+  const sidebarTagLines = $('#sidebar-tagline').text(item)
+</script>

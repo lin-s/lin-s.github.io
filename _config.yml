@@ -20,7 +20,9 @@ timezone: Asia/Shanghai
 
 title: lins blog # the main title
 
-tagline: Think tall, gotta smile, and have fun! # it will display as the sub-title
+tagline: "'生活，不在别处，当下即是全部'|'Think tall, gotta smile, and have fun!'"
+
+# tagline: Think tall, gotta smile, and have fun! # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A blog to share lin's life.
@@ -81,10 +83,10 @@ theme_mode: # [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn:
+img_cdn: /assets/img
 
 # the avatar on sidebar, support local or CORS resources
-avatar: /assets/img/avatar.jpg
+avatar: /avatar.jpg
 
 # boolean type, the global switch for TOC in posts.
 toc: true
