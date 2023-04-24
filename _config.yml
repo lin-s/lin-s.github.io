@@ -20,9 +20,7 @@ timezone: Asia/Shanghai
 
 title: lins blog # the main title
 
-tagline: "'生活，不在别处，当下即是全部'|'Think tall, gotta smile, and have fun!'"
-
-# tagline: Think tall, gotta smile, and have fun! # it will display as the sub-title
+tagline: Think tall, gotta smile, and have fun! # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A blog to share lin's life.
