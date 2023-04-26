@@ -4,5 +4,11 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
+这是小林的博客，一个记录生活，分享生活的站点。可能时而分享琐碎日常，时而记录学习总结，时而分享新潮有趣的技术文章，不过也可能只是自言自语，跟空气唠嗑~
+
+总而言之，这是个随心，随意，还有点随便的博客。这个空间存在的意义也许仅仅是为了提醒自己，别让生活过得只剩下工作，而忘记了快乐......日子过得很快，但生活要慢慢来。
+
+*Last but not least:*
+
+> 分享日常是快乐的，得到回应会快乐加倍~
 {: .prompt-tip }
