@@ -22,4 +22,7 @@ node_modules
 # ENV configuration
 .env.local
 
+# log files
+*.log
+
 # Misc
