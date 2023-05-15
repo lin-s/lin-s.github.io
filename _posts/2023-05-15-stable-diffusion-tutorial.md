@@ -26,7 +26,8 @@ Stable Diffusion 是 2022 年发布的深度学习文字到图像生成模型，
 
 ![image-00.jpg](/posts/2023-05-15/image-00.jpg)
 
-> 过度使用，显卡会有损坏的风险。{: .prompt-danger }
+> 过度使用，显卡会有损坏的风险。
+{: .prompt-danger }
 
 ## 环境部署
 
