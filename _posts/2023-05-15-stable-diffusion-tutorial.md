@@ -19,7 +19,7 @@ Stable Diffusion 是 2022 年发布的深度学习文字到图像生成模型，
 ### 硬件要求
 
 - 内存：16G及以上
-- 显卡：6G以上显存的显卡，推荐N卡（[A卡运算速度明显慢于 N 卡](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs)），低于`GTX1060 6G`的显卡就不建议折腾了
+- 显卡：4G以上显存的显卡，推荐20系以上N卡（[A卡运算速度明显慢于 N 卡](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs)），低于`GTX1060 6G`的显卡就不建议折腾了
 - 硬盘：建议60G以上（一个`CHECKPOINT`模型通常为2~8G，硬盘越大就能容纳更多模型）
 
 进行 512 x 512 图片生成时主流显卡速度对比：
@@ -58,7 +58,9 @@ stable diffusion webui 的完整环境占用空间极大，能达到几十 G。�
 
 ### 整合包
 
-觉得麻烦的同学可以使用整合包，解压即用，这里推荐[秋叶的启动器](https://www.bilibili.com/video/BV1iM4y1y7oA/?spm_id_from=333.999.0.0&vd_source=ffcf6aa94357de29ec85182901d261a2)，已集成各种常用的插件，且支持后续的更新。打开启动器后，可一键启动：
+觉得麻烦的同学可以使用整合包，解压即用，这里推荐[秋叶的启动器](https://www.bilibili.com/video/BV1iM4y1y7oA/?spm_id_from=333.999.0.0&vd_source=ffcf6aa94357de29ec85182901d261a2)，已集成各种常用的插件，且支持后续的更新。打开启动器后先到模型管理菜单下载模型，之后便可一键启动了：
+
+![image-10.png](/posts/2023-05-15/image-10.png)
 
 ![image-01.png](/posts/2023-05-15/image-01.png)
 
@@ -92,14 +94,12 @@ Stable Diffusion 可安装大量插件扩展，在 webui 的“扩展”选项�
 
 ## 文生图流程
 
-1. （必要）下载CHECKPOINT模型，并放置在的`models/Stable-diffusion`目录中
+1. （必要）下载CHECKPOINT模型，并放置在的`models/Stable-diffusion`目录中。整合包可到模型管理菜单下载模型，列表中的应该都是较为有名的二次元风格模型，个人推荐OrangeMix、EkMix模型。这里再补充几个真实和二次元都能画的模型：[NeverEnding Dream (NED)](https://civitai.com/models/10028?modelVersionId=64094)、[Lyriel](https://civitai.com/api/download/models/50127)、[DreamShaper](https://civitai.com/api/download/models/43888)，需自备梯子或使用[百度网盘（提取码：lins）](https://pan.baidu.com/s/1_ywIzBsHFB85PkOcbLr16g)。其中NED和DreamShaper已自带VAE了，Lyriel推荐配合VAE模型使用。
 2. （必要）选择CHECKPOINT模型：选择需要使用的CHECKPOINT模型，如果选项中没有出现已下载的模型，点击右侧的刷新按钮刷新下。CHECKPONIT模型是对生成结果影响最大的因素，主要体现在画面元素以及整体风格上。
 3. （可选）添加VAE模型：下载并选择VAE模型，存放路径为`models/VAE` 这类模型一般用于控制画面的色彩风格，可以简单理解为滤镜般的效果，可根据自己的喜好来决定是否开启。
 4. （必要）填写正面提示词：在第一个框中填入提示词（Prompt），对想要生成的东西进行英文描述。
 5. （可选）添加Lora模型：下载Lora模型放置在`models/Lora`目录中并在webui的Lora标签页刷新模型列表，然后在Prompt中添加`<lora:模型名:权重>`以及模型关键词来启用lora模型。此类模型用途宽泛，可以换脸，换体型，换风格，甚至可以左右画面的整体布局方式，建议根据需要下载和使用。
-
 6. （建议）填写负面提示词：在第二个框中填入负面提示词（Negative prompt)，对不想要生成的东西进行英文描述。AI不擅长画手脚，建议添加 `bad hands` 之类的负面提示词。有些大模型会包含R18的内容，所以如果你希望最终生成的图片能顺利发布到国内的社交平台，请务必在负面提示词的开头加上`(NSFW)`。什么？你想发到国外的社交平台？！Σ(っ °Д °;)っ
-
 7. （必要）设置参数：设置好采样方法、采样次数、图片尺寸，批次数量，随机种子等参数。
 8. （必要）生成图像：点击生成按钮，然后就可以去喝杯咖啡等图像出来了。（温馨提醒：晚上建议把咖啡换成牛奶）
 9. （必要）保存图像：生成的图像可以点击保存来下载，也可以直接在webui的`outputs`目录中找到。
@@ -213,3 +213,4 @@ masterpiece, best quality, ultra-detailed, illustration, close-up, straight on, 
 - [Danbooru Tag Groups Wiki](https://danbooru.donmai.us/wiki_pages/tag_groups)
 - [AIBooru: Anime Image Board](https://aibooru.online/)
 
+先写到这儿，后面再补采样器，ControlNet，以及各类模型的使用，内容确实有点多（并不是因为外卖到咯）。
