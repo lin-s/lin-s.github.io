@@ -61,8 +61,8 @@ analytics:
       proxy_endpoint: # fill in the Google Analytics superProxy endpoint of Google App Engine
       cache_path: # the local PV cache data, friendly to visitors from GFW region
   baidu:
-    # id: d1230862f2958a0dede367a0a669b89a # fill in your Baidu Analytics ID
-    id: 3ac48ee62a8521b225680a66d3a28ef1 # github.io id
+    id: d1230862f2958a0dede367a0a669b89a # fill in your Baidu Analytics ID
+    # id: 3ac48ee62a8521b225680a66d3a28ef1 # github.io id
 
 # Prefer color scheme setting.
 #
