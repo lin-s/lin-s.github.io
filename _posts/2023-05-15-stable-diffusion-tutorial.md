@@ -214,6 +214,8 @@ masterpiece, best quality, ultra-detailed, illustration, close-up, straight on, 
 
 ## 基本参数
 
+![image-12.jpg](/posts/2023-05-15/image-12.jpg)
+
 ### Sampler（采样器/采样方法）
 
 目前流行的采样器有以下这些：
