@@ -1,5 +1,5 @@
 ---
-title: Stable Diffusion 入门教程（未完）
+title: Stable Diffusion 入门教程（补充绘图参数说明）
 author: lin_sun
 date: 2023-05-15 20:30:00 +0800
 categories: [AI, Tutorial]
@@ -297,9 +297,14 @@ Stable Diffusion 的工作方式是从以随机高斯噪声起步，向符合提
 
 理论上，在参数（如：正负提示词、采样器与采样方法、CFG、Seed）完全相同的情况下，生产的图片应当完全相同。
 
+## 插件
+
 ### Tiled Diffusion & VAE（图像放大与节省显存的神器）
 
 详情请看这篇文章：[用 Tiled Diffusion & VAE 生成大型图像](https://github.com/pkuliyi2015/multidiffusion-upscaler-for-automatic1111/blob/main/README_CN.md)
 
 也可单独开启 Tiled VAE 来节省显存，其原理简单来说就是将一张大图分块进行处理。编码器的分块大小可尽量调大，直到CUDA报out of memory（内存不足）的错误。快速编码器、快速编码器颜色修复、快速解码器都建议开启。
 
+### ControlNet
+
+这个插件太过强大，慢慢补~
