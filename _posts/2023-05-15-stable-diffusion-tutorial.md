@@ -202,7 +202,7 @@ masterpiece, best quality, ultra-detailed, illustration, close-up, straight on, 
 类似的网站还有：
 
 - [MajinAI](https://majinai.art/zh-cn/index.php)
-- [词图 PromptTool](http://www.prompttool.com/NovelAI)
+- [词图 PromptTool](https://www.prompttool.com/NovelAI)
 - [black_lily](https://heizicao.gitee.io/novelai/#/book)
 - [Danbooru 标签超市](https://tags.novelai.dev/)
 - [魔咒百科词典](https://aitag.top/)
