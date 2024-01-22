@@ -203,7 +203,7 @@ masterpiece, best quality, ultra-detailed, illustration, close-up, straight on, 
 
 - [MajinAI](https://majinai.art/zh-cn/index.php)
 - [词图 PromptTool](http://www.prompttool.com/NovelAI)
-- [black_lily](http://heizicao.gitee.io/novelai/#/book)
+- [black_lily](https://heizicao.gitee.io/novelai/#/book)
 - [Danbooru 标签超市](https://tags.novelai.dev/)
 - [魔咒百科词典](https://aitag.top/)
 - [AI 词汇加速器 AcceleratorI Prompt](https://ai.dawnmark.cn/)
