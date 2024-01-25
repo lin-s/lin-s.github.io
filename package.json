@@ -28,6 +28,7 @@
     "@commitlint/config-conventional": "^18.4.4",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-terser": "^0.4.4",
+    "cross-env": "^7.0.3",
     "husky": "^8.0.3",
     "rimraf": "^5.0.5",
     "rollup": "^4.9.2",
